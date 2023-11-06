@@ -13,15 +13,24 @@
 
         h1#pgs {
             text-align: center;
-            margin: 30px 0 0 0;
+            margin: 50px 0 20px 0;
             padding: 5px;
             color: #FF3C2D;
         }
 
         h2#pgs {
-            text-align: center;
-            margin: -15px 0 50px 0;
+            text-align: left;
+            margin: 5px 0 0px 0px;
             color: #FF7558;
+        }
+
+        h3#pgs {
+            color: #FFAF84;
+            text-indent: 20px;
+        }
+
+        p {
+            text-indent: 20px;
         }
 
     </style>
@@ -45,6 +54,36 @@
 
     <div class="container">
         <div class="box">
+            <h2 id="pgs">Algoritmo Guloso</h2>
+            <br><p>Um algorimot guloso é "míope", ele toma decisões com base nas informações disponíveis na iteração corrente, sem olhar as consequências que esses decisões terão no futuro. Um algoritmo guloso jamais se arrepende ou volta atrás, as escolhas que faz em cada iteração são definitivas.</p>
+
+            <br><strong>PALAVRA CHAVE:</strong> Algoritmo Guloso toma a melhor decisão possível em um determinado momento. <br>
+
+            <br><strong>Exemplo:</strong> Caminho de peso mínimo. <br>
+
+            <br><h2 id="pgs">Dividir para Conquistar</h2>
+            <br><p>Dividir e conquistar, quebra o problema em subproblemas que são similares ao problema original, recursivamente resolve os subproblemas, e finalmente combina as soluções para resolver o problema original. Porque dividir e conquistar resolve subproblemas recursivamente, cada subproblema deve ser menor que o problema original, e deve existir um problema base para os subproblemas. Você deve pensar o algoritmo dividir e conquistar como tendo três partes:</p>
+
+            <br><p><strong>1. </strong> Dividir o problema em um número de subproblemas que seja, partes menores os mesmos problemas.</p>
+            <p><strong>2. </strong> Conquistar os subproblemasresolvendo-os recursivamente. Se eles forem pequenos o suficiente, resolve os subproblemas como problemas base.</p>
+            <p><strong>3. </strong> Combinar as soluções dos subproblemas em uma solução para o problema original.</p>
+
+            <br><h2 id="pgs">Complexidade de Problemas</h2>
+            <br><h3 id="pgs">Classe P</h3>
+            <br><p>Na teoria da complexidade computacional, P é  acrônimo em inglês para tempo polinomial determinístico (Deterministic Polynomial Time), que denota o conjunto de problemas que podem ser resolvidos em tempo polinomial por uma máquina de Turing determinística.</p>
+            <p>Alguns exemplos de problemas que pertencem a classe "P" incluem a ordenação de uma lista de números, a busca por um elemento em uma lista de ordenada e multiplicação de números inteiros. Esses problemas têm algoritmos eficientes que podem resolvê-los em tempo polinomial.</p>
+
+            <br><h3 id="pgs">Classe NP</h3>
+            <br><p>Na teoria da complexidade computacional, NP é o acrônimo em inglês para Tempo polinomial não determinístico (Non-Deterministic Polynomial time) que denota o conjunto de problemas que são decidíveis em tempo polinomial por uma máquina de Turing não-determinística. Uma definição equivalente é o conjunto de problemas de decisão que podem ter seu certificado verificado em tempo polinomial por uma máquina de Turing determinística</p>
+
+            <p>Problemas na classe NP têm a propriedade de que, se alguém lhe der ua suposta solução para o problema, você pode verificar se essa solução está correta em um tempo que é limitado por uma função polinomial no tamanho da entrada. No entanto, encontrar uma solução (se ela existir) pode ser um problema muito mais dificíl e não necessariamente resolvível em tempo polinomial. Essa é uma das questões centrais em teoria da complecidade computacional, conhecidade como o problema P versus NP, que a pergunta se P é igual a NP.</p>
+
+            <br><h3 id="pgs">Classe NP-Completo</h3>
+            <br><p>Um dos primeiros problemas a serem provados NP-Completos foi o "problema da satisfatibilidade booleana" (ou SAT). SAT envolve determinar se uma expressão booleana composta por várias booleanas, operadores lógicos e cláusulas é satisfatória (ou seja, se existe uma atribuição de valores às variáveis que fazem a expressão verdadeira).</p>
+            <p>A descoberta dos problemas NP-Completos foi um marco na teoria da complexidade computacional, e a classe NP-Completo inclui muitos problemas práticos, como o problema do "Caixeiro Viajante", o problema da "Mochila" e muitos outros. A identificação de problemas NP-Completos ajuda a entender a dificuldade intrínseca de vários problemas de otimização e tomada de decisão, e também desenpenha um papel crucial na classificação de problemas de acordo com sua complexidade computacional.</p>
+
+            <br>
+
         </div>
     </div>
     

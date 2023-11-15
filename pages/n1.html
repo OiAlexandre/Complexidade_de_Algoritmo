@@ -9,28 +9,14 @@
     <link rel="stylesheet" type="text/css"  href="../css/estilos.css">
     <title>Conteúdos N1</title>
 
-    <style>
-
-        h1#pgs {
-            text-align: center;
-            margin: 30px 0 0 0;
-            padding: 5px;
-            color: #FF3C2D;
-        }
-
-        h2#pgs {
-            text-align: center;
-            margin: -15px 0 50px 0;
-            color: #FF7558;
-        }
-
-    </style>
-
 </head>
 
 <body>
     <nav>
         <h2 id="header">Complexidade de Algoritmo</h2>
+        <div id="relogio"></div>
+
+        
         <div class="menu-btn">
             <i class="fa fa-bars fa-2x" onclick="mostrarMenu()"></i>
         </div>
@@ -46,10 +32,93 @@
 
     <div class="container">
         <div class="box">
+
+            <h2 id="pgs">Complexidade de Algoritmos</h2>
+            <br><p id="pgs">A complexidade de um algoritmo é analisada em termos de tempo e espaço. Normalmente, o algoritmo terá um desempenho diferente com base no processador, disco, memória e outros parâmetros de hardware. A complexidade é usada para medir a velocidade de um algoritmo. Sendo o algoritmo um agrupamento de etapas para se executar uma tarefa, o tempo que leva para um algoritmo ser executado é baseado no número de passos. Digamos que um algoritmo percorre um array de dez posições somando o índice das posições a 200. A complexidade seria de 10xt, sendo que t representa o tempo necessário para atualizar cada elemento do array com a operação de soma. Cada computador pode ser muito diferente: o tempo varia de acordo com o hardware, a linguagem utilizada e o sistema operacional.</p>
+
+            <br><img src="imagens/exemplo1.png" alt="">
+
+            <br><img src="imagens/exemplo2.png" alt=""><br>
+
+            <br><p>Output:</p> 
+
+            <br><img src="imagens/exemplo3.png" alt=""><br>
+
+            <br><p id="pgs">Temos 10 operações acontecendo, aparentemente muito simples. Com uma Notação é possível calcular a complexidade de um algoritmo sem precisar levar em consideração parâmetros de hardware.</p>
+
+            <br><h2 id="pgs">Big O</h2>
+
+            <br><p id="pgs">A Big O Notation é uma notação especial que indica a complexidade de um algoritmo. Na realidade, existem várias notações: big e small O, big e small omega e theta.</p>
+
+            <br><p id="pgs">A notação do O é sobre um “limite por cima”; a omega, “limite por baixo”; e a theta é a combinação de ambos. ‘Small’ Notations representam afirmações mais rígidas sobre a complexidade do que ‘Big’ Notations.</p>
+
+            <br><p id="pgs">Geralmente a Big O é mais utilizada porque o interesse está em verificar, sem tanta rigidez, o máximo de recursos que o algoritmo vai utilizar, e tentar reduzir isso quando possível.</p>
+
+            <br><p id="pgs">A função de tempo T(n) representa a complexidade do algoritmo, tal que T(n) = O(n) afirmando que um algoritmo tem uma complexidade linear de tempo, pois o TEMPO é relacionado a N, isto é, o tamanho de input do algoritmo.</p>
+
+            <br><p id="pgs">Boa parte do material relacionado a Big O Notation é excessivamente formal. Isso talvez cause certo receio em algumas pessoas. Apesar disso, com alguma dedicação se torna fácil enxergar os padrões.</p>
+
+            <br><p id="pgs">Em Big O Notation as complexidades de tempo linear, logarítmica, cúbica e quadrática são representações de complexidades diferentes de relação entre T e N em um algoritmo. A Big O Notation também é usada para determinar quanto espaço é consumido pelo algoritmo.</p>
+
+            <br><p id="pgs">Você pode visualizar de forma gráfica o crescimento de tempo e de tamanho do input e como eles se relacionam. No final, é sobre isso: a relação entre um ou mais aspectos da entrada e o tempo de execução do algoritmo.</p>
+
+            <br><p id="pgs">Importante: nem sempre o desempenho do algoritmo é afetado apenas pelo tamanho da entrada. O algoritmo de ordenação counting sort, por exemplo, é afetado também pelo maior número na lista.</p>
+
+            <br><img src="imagens/exemplo4.png" alt=""><br>
+
+            <br><h2 id="pgs">Ordens Assintóticas</h2>
+
+            <br><p id="pgs">À medida em que o argumento de uma função cresce ou diminui infinitamente, isto é, muito grande ou muito pequeno, realizamos uma análise assintótica da função para determinar sua complexidade por meio de uma representação generalista</p>
+
+            <br><h3 id="pgs">Essa representação segue três notações principais: </h3>
+            <br><p><strong>1.</strong> O(f(n))</p>
+            <p>O(f(n)): Essa notação define um limite superior assintótico para a função.</p>
+
+            <br><p><strong>2.</strong> Ômega(f(n))</p>
+            <p>Ômega(f(n)) Notação ômega: Essa notação define um limite inferior assintótico para a função.</p>
+
+            <br><p><strong>3.</strong> Tetha(f(n))</p>
+            <p>Tetha(f(n)) Notação Tetha: Define o limite exato da função analisada.</p>
+
+            <br><h2 id="pgs">Complexidade Média</h2>
+
+            <br><p id="pgs">A complexidade média de um algoritmo é a média ponderada do desempenho de cada entrada pela probabilidade dela ocorrer.</p>
+
+            <br><p id="pgs">Considere um algoritmo "a"; o conjunto de suas entradas com tamanho n, Dn; e prob(d) a probabilidade de ocorrer a entrada d de D. </p>
+
+            <br><p id="pgs">Assim, a complexidade média do algoritmo "a" é igual a :</p>
+
+            <br><img src="imagens/exemplo5.png" alt=""><br><br>
+
         </div>
+
+
     </div>
     
     <script src="javascript/scripts.js"></script>
+
+    <script>
+        function atualizarRelogio() {
+            var agora = new Date();
+            var horas = agora.getHours();
+            var minutos = agora.getMinutes();
+            var segundos = agora.getSeconds();
+    
+            // Adiciona um zero à esquerda se for menor que 10
+            horas = horas < 10 ? "0" + horas : horas;
+            minutos = minutos < 10 ? "0" + minutos : minutos;
+            segundos = segundos < 10 ? "0" + segundos : segundos;
+    
+            var horarioAtual = horas + ":" + minutos + ":" + segundos;
+            document.getElementById("relogio").innerText = horarioAtual;
+        }
+    
+        // Atualiza o relógio a cada segundo
+        setInterval(atualizarRelogio, 1000);
+    
+        // Inicializa o relógio
+        atualizarRelogio();
+    </script>
 </body>
 
 <footer>

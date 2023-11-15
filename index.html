@@ -9,30 +9,13 @@
     <link rel="stylesheet" type="text/css"  href="css/estilos.css">
     <title>Página Inicial</title>
 
-    <style>
-
-        h1#home {
-            text-align: center;
-            margin: 30px 0 0 0;
-            padding: 5px;
-            color: #FF3C2D;
-        }
-
-        h2#home {
-            margin: 0px 0px 0px 50px;
-            color: #FF7558;
-        }
-
-        p#home {
-            margin: 0 10px 0 10px;
-        }
-
-    </style>
 </head>
 
 <body>
     <nav>
         <h2 id="header">Complexidade de Algoritmo</h2>
+        <div id="relogio"></div>
+
         <div class="menu-btn">
             <i class="fa fa-bars fa-2x" onclick="mostrarMenu()"></i>
         </div>
@@ -73,6 +56,29 @@
     </div>
 
     <script src="javascript/scripts.js"></script>
+
+    <script>
+        function atualizarRelogio() {
+            var agora = new Date();
+            var horas = agora.getHours();
+            var minutos = agora.getMinutes();
+            var segundos = agora.getSeconds();
+    
+            // Adiciona um zero à esquerda se for menor que 10
+            horas = horas < 10 ? "0" + horas : horas;
+            minutos = minutos < 10 ? "0" + minutos : minutos;
+            segundos = segundos < 10 ? "0" + segundos : segundos;
+    
+            var horarioAtual = horas + ":" + minutos + ":" + segundos;
+            document.getElementById("relogio").innerText = horarioAtual;
+        }
+    
+        // Atualiza o relógio a cada segundo
+        setInterval(atualizarRelogio, 1000);
+    
+        // Inicializa o relógio
+        atualizarRelogio();
+    </script>
 </body>
 
 <footer>

@@ -14,6 +14,12 @@ h2#header {
     margin: 0 0 0 -70px;
 }
 
+#relogio {
+    font-size: 1.75em;
+    text-align: center;
+    color: #FFE8B0; 
+}
+
 h2#footer {
     color: #FFE8B0;
 }
@@ -108,6 +114,17 @@ nav  .menu-btn i{
         font-size: 20px;
     }
 
+    #relogio {
+        font-size: 1.5em;
+        text-align: center;
+        color: #FFE8B0; 
+    }
+
+    img {
+        width: 400px;
+        margin: 0 0 0 -80px;
+    }
+
 }
 
 .container {
@@ -115,8 +132,47 @@ nav  .menu-btn i{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 .box {
     width: 50%;
+}
+
+h1#home {
+    text-align: center;
+    margin: 30px 0 0 0;
+    padding: 5px;
+    color: #FF3C2D;
+}
+
+h2#home {
+    margin: 0px 0px 0px 50px;
+    color: #FF7558;
+}
+
+p#home {
+    margin: 0 10px 0 10px;
+    text-indent: 20px;
+}
+
+h1#pgs {
+    text-align: center;
+    margin: 50px 0 20px 0;
+    padding: 5px;
+    color: #FF3C2D;
+}
+
+h2#pgs {
+    text-align: left;
+    margin: 5px 0 0px 0px;
+    color: #FF7558;
+}
+
+h3#pgs {
+    color: #FFAF84;
+    text-indent: 20px;
+}
+
+p#pgs {
+    text-indent: 20px;
 }
